@@ -4,6 +4,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 import java.util.Date;
+import java.util.Objects;
 
 
 @Entity
@@ -130,6 +131,20 @@ public class Persona extends Usuario {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Persona)) return false;
+        if (!super.equals(o)) return false;
+        Persona persona = (Persona) o;
+        return getName().equals(persona.getName()) && getApellido().equals(persona.getApellido()) && getFechaNac().equals(persona.getFechaNac()) && getGenero().equals(persona.getGenero()) && getCiudad().equals(persona.getCiudad()) && getProvincia().equals(persona.getProvincia()) && getPais().equals(persona.getPais()) && getEmail().equals(persona.getEmail());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), getName(), getApellido(), getFechaNac(), getGenero(), getCiudad(), getProvincia(), getPais(), getEmail());
+    }
+
+    @Override
     public String toString() {
         return "Persona{" +
                 "name='" + name + '\'' +
@@ -142,16 +157,5 @@ public class Persona extends Usuario {
                 ", email='" + email + '\'' +
                 '}';
     }
-
-
-    //metodo Agregar persona al grupo a traves del usuario del mismo
-
-
-
-    //metodo para eliminar Usuario.
-    //metodo para modificar Usuario.
-    //metodo para visualizar Usuario.(Info).
-    //metodo para buscar usuario.
-
 
 }

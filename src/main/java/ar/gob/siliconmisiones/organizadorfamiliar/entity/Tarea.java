@@ -5,6 +5,7 @@ import org.springframework.format.annotation.DateTimeFormat;
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table
@@ -133,6 +134,19 @@ public class Tarea {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Tarea)) return false;
+        Tarea tarea = (Tarea) o;
+        return getIdTarea() == tarea.getIdTarea() && isEstado() == tarea.isEstado() && getTitulo().equals(tarea.getTitulo()) && getDescripcion().equals(tarea.getDescripcion()) && getCategoria().equals(tarea.getCategoria()) && getFechaTarea().equals(tarea.getFechaTarea()) && getGroup().equals(tarea.getGroup()) && getPersona().equals(tarea.getPersona()) && getAsignacionMultiple().equals(tarea.getAsignacionMultiple());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdTarea(), getTitulo(), getDescripcion(), getCategoria(), getFechaTarea(), isEstado(), getGroup(), getPersona(), getAsignacionMultiple());
+    }
+
+    @Override
     public String toString() {
         return "Tarea{" +
                 "idTarea=" + idTarea +
@@ -146,30 +160,5 @@ public class Tarea {
                 ", asignacionMultiple=" + asignacionMultiple +
                 '}';
     }
-
-    //metodo para crear tarea.
-    //metodo para eliminar tarea.
-    //metodo para modificar tarea.
-        //para asignar participante a la tarea.//
-        //para modificar participante en la tarea.
-    //metodo para estado de tarea.
-    //metodo para buscar tarea.
-    //metodo para visualizar tarea. (hechas y en ejecucion, todas).
-
-
-
-    //Basarse en la hora y fecha del sistema.
-    //metodo para calcular el tiempo historico.
-    //metodo para calcular el tiempo promedio.
-    //metodo para calcular el tiempo de ejecucion.
-
-
-
-
-
-
-
-
-
 
 }

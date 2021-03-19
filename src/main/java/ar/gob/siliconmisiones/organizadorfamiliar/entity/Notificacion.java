@@ -1,6 +1,7 @@
 package ar.gob.siliconmisiones.organizadorfamiliar.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 
 @Entity
 @Table
@@ -64,15 +65,27 @@ public class Notificacion {
         this.grupo = grupo;
     }
 
-    //cuando dentro de un grupo crado se agrega una persona cambia el estado y se notifica a traves de un mensaje
-    //que se agrego un participante con el usuario de la persona que lo agrego
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Notificacion)) return false;
+        Notificacion that = (Notificacion) o;
+        return getIdNotificacion() == that.getIdNotificacion() && getDescripcionNot().equals(that.getDescripcionNot()) && getTarea().equals(that.getTarea()) && getGrupo().equals(that.getGrupo());
+    }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdNotificacion(), getDescripcionNot(), getTarea(), getGrupo());
+    }
 
-
-    //metodo para ver tareas;
-    //metodo para visualizar "añadido de grupo"
-    //metodo para enviar notificion respecto a un parametro (Cambio de estado);
-    //metodo de asignacion de tarea (otro usuario);
-    //metodo recordatorio tarea;
+    @Override
+    public String toString() {
+        return "Notificacion{" +
+                "idNotificacion=" + idNotificacion +
+                ", descripcionNot='" + descripcionNot + '\'' +
+                ", tarea=" + tarea +
+                ", grupo=" + grupo +
+                '}';
+    }
 
 }

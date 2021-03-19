@@ -1,6 +1,7 @@
 package ar.gob.siliconmisiones.organizadorfamiliar.entity;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -77,6 +78,19 @@ public class Usuario {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Usuario)) return false;
+        Usuario usuario = (Usuario) o;
+        return getIdUser() == usuario.getIdUser() && getUser().equals(usuario.getUser()) && getPassword().equals(usuario.getPassword()) && getRole().equals(usuario.getRole()) && getRoles().equals(usuario.getRoles());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdUser(), getUser(), getPassword(), getRole(), getRoles());
+    }
+
+    @Override
     public String toString() {
         return "Usuario{" +
                 "idUser=" + idUser +
@@ -86,11 +100,5 @@ public class Usuario {
                 ", roles=" + roles +
                 '}';
     }
-
-    //metodo para crear Usuario.
-    //metodo para eliminar Usuario.
-    //metodo para modificar Usuario.
-    //metodo para visualizar Usuario.(Info).
-
 
 }

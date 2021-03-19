@@ -49,7 +49,7 @@ public class Role implements Serializable {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
+        if (!(o instanceof Role)) return false;
         Role role = (Role) o;
         return getId().equals(role.getId()) && getName().equals(role.getName()) && getDescription().equals(role.getDescription());
     }
@@ -67,7 +67,5 @@ public class Role implements Serializable {
                 ", description='" + description + '\'' +
                 '}';
     }
-
-    //Getters, Setters, HashCode, Equals & ToString Functions
 
 }

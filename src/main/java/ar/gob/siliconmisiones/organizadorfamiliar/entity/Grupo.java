@@ -2,6 +2,7 @@ package ar.gob.siliconmisiones.organizadorfamiliar.entity;
 
 import javax.persistence.*;
 import java.util.List;
+import java.util.Objects;
 
 @Entity
 @Table
@@ -78,20 +79,29 @@ public class Grupo {
         this.integrantesGrupo = integrantesGrupo;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Grupo)) return false;
+        Grupo grupo = (Grupo) o;
+        return getIdGroup() == grupo.getIdGroup() && getNameGroup().equals(grupo.getNameGroup()) && getDescripcion().equals(grupo.getDescripcion()) && getPersona().equals(grupo.getPersona()) && getIntegrantesGrupo().equals(grupo.getIntegrantesGrupo());
+    }
 
-    //a traves del objeto de persona se agregar un participante dentro del array de grupo
+    @Override
+    public int hashCode() {
+        return Objects.hash(getIdGroup(), getNameGroup(), getDescripcion(), getPersona(), getIntegrantesGrupo());
+    }
 
-    //metodo para crear grupo.
-    //metodo para eliminar grupo.
-    //metodo para modificar grupo.
-    //metodo para añadir participante al grupo
-    //metodo para elimanar participante
-    //metodo para salir grupo.
-    //metodo para buscar grupo.
-    //metodo para visualizar grupo.
-
-
-
+    @Override
+    public String toString() {
+        return "Grupo{" +
+                "idGroup=" + idGroup +
+                ", nameGroup='" + nameGroup + '\'' +
+                ", descripcion='" + descripcion + '\'' +
+                ", persona=" + persona +
+                ", integrantesGrupo=" + integrantesGrupo +
+                '}';
+    }
 
 
 }
