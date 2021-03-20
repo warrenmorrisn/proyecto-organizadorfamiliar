@@ -34,10 +34,10 @@ public class UsuarioRestController {
     @Controller
     public class GreetingController {
 
-        @GetMapping("/greeting")
+        @GetMapping("/profile")
         public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
             model.addAttribute("name", name);
-            return "./mi_perfil/miPerfil";
+            return "./miPerfil";
         }
 
     }
