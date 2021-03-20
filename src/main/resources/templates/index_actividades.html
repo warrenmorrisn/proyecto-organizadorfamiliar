@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 
 <head>
@@ -15,7 +16,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../static/image/Dr. Stoddard-2.png" alt="">
+            <img src="../static/image/Dr. Stoddard-2.png" alt="" th:src="@{images/Dr. Stoddard-2.png}">
             <input type="search" placeholder="Buscar...">
 
         </div>
@@ -31,21 +32,21 @@
                         <div class="row m-l-0 m-r-0">
                             <div class="col-sm-4 bg-c-lite-green user-profile">
                                 <div class="card-block text-center text-white">
-                                    <div class="m-b-25"> <img src="../static/image/perfil.jpg" class="img-radius" alt="User-Profile-Image"> </div>
+                                    <div class="m-b-25"> <img src="../static/image/perfil.jpg" class="img-radius" alt="User-Profile-Image" th:src="@{images/perfil.jpg}"> </div>
                                     <h6 class="f-w-600">Jesus Coronado</h6>
                                     <p>Grupo / Mis Grupos</p>
                                     <div class="col-md-12">
-                                        <img src="../static/images/Icon awesome-chart-line.png"> Estadisticas
+                                        <img src="../static/images/Icon awesome-chart-line.png" th:src="@{images/Icon awesome-chart-line.png}"> Estadisticas
                                         <br>
-                                        <img src="../static/images/Icon ionic-ios-star-outline.png"> Actividades
+                                        <img src="../static/images/Icon ionic-ios-star-outline.png" th:src="@{images/Icon ionic-ios-star-outline.png}"> Actividades
                                         <br>
-                                        <img src="../static/images/Icon material-people-outline.png"> Mis Grupos
+                                        <img src="../static/images/Icon material-people-outline.png" th:src="@{images/Icon material-people-outline.png}"> Mis Grupos
                                         <br>
-                                        <img src="../static/images/Icon awesome-layer-group.png"> Notificaciones
+                                        <img src="../static/images/Icon awesome-layer-group.png" th:src="@{images/Icon awesome-layer-group.png}"> Notificaciones
                                         <br>
-                                        <img src="../static/images/Icon feather-calendar.png"> Calendario
+                                        <img src="../static/images/Icon feather-calendar.png" th:src="@{images/Icon feather-calendar.png}"> Calendario
                                         <br>
-                                        <img src="../static/images/Icon awesome-random.png"> Modo Aleatorio
+                                        <img src="../static/images/Icon awesome-random.png" th:src="@{images/Icon awesome-random.png}"> Modo Aleatorio
                                     </div>
                                 </div>
                             </div>
