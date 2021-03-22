@@ -9,7 +9,7 @@
   <li class="side-nav-menu-item {{ Request::is('dashboard') ? 'active' : '' }}">
 	<a class="side-nav-menu-link media align-items-center" href="{{ route('dashboard') }}">
 	  <span class="side-nav-menu-icon d-flex mr-3">
-		<i class="gd-dashboard"></i>
+		<i class="gd-star"></i>
 	  </span>
 	  <span class="side-nav-fadeout-on-closed media-body">INICIO</span>
 	</a>

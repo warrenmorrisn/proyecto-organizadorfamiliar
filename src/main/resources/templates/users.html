@@ -3,17 +3,17 @@
 <html lang="en">
 <head>
     <!-- Title -->
-    <title>Create User | Graindashboard UI Kit</title>
+    <title>Users | Graindashboard UI Kit</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="public/img/favicon.ico">
+    <link rel="shortcut icon" href="../public/img/favicon.ico">
 
     <!-- Template -->
-    <link rel="stylesheet" href="public/graindashboard/css/graindashboard.css">
+    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css">
 </head>
 
 <body class="has-sidebar has-fixed-sidebar-and-header">
@@ -23,14 +23,14 @@
         <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
             <!-- Logo For Mobile View -->
             <a class="navbar-brand navbar-brand-mobile" href="/">
-                <img class="img-fluid w-100" src="public/img/logo-mini.png" alt="Graindashboard">
+                <img class="img-fluid w-100" src="../public/img/logo-mini.png" alt="Graindashboard">
             </a>
             <!-- End Logo For Mobile View -->
 
             <!-- Logo For Desktop View -->
             <a class="navbar-brand navbar-brand-desktop" href="/">
-                <img class="side-nav-show-on-closed" src="public/img/logo-mini.png" alt="Graindashboard" style="width: auto; height: 33px;">
-                <img class="side-nav-hide-on-closed" src="public/img/logo.png" alt="Graindashboard" style="width: auto; height: 33px;">
+                <img class="side-nav-show-on-closed" src="../public/img/logo-mini.png" alt="Graindashboard" style="width: auto; height: 33px;">
+                <img class="side-nav-hide-on-closed" src="../public/img/logo.png" alt="Graindashboard" style="width: auto; height: 33px;">
             </a>
             <!-- End Logo For Desktop View -->
         </div>
@@ -145,6 +145,7 @@
             <!-- End Dashboard -->
 
 
+
             <!-- Title -->
             <li class="sidebar-heading h6">Menú</li>
             <!-- End Title -->
@@ -165,11 +166,11 @@
 
                 <!-- Users: subUsers -->
                 <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0" style="display: block;">
-                    <li class="side-nav-menu-item">
+                    <li class="side-nav-menu-item active">
                         <a class="side-nav-menu-link" href="users.html">Todos los Usuarios</a>
                     </li>
-                    <li class="side-nav-menu-item active">
-                        <a class="side-nav-menu-link" href="user-edit.html">Añadir Nuevo Usuario</a>
+                    <li class="side-nav-menu-item">
+                        <a class="side-nav-menu-link" href="user-edit.html">Añadir Nuevo</a>
                     </li>
                 </ul>
                 <!-- End Users: subUsers -->
@@ -274,50 +275,122 @@
                             <li class="breadcrumb-item">
                                 <a href="#">Usuarios</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Crear Nuevo Usuario</li>
+                            <li class="breadcrumb-item active" aria-current="page">Todos los Usuarios</li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
                     <div class="mb-3 mb-md-4 d-flex justify-content-between">
-                        <div class="h3 mb-0">Crear Nuevo Usuario</div>
+                        <div class="h3 mb-0">Usuarios</div>
                     </div>
 
 
-                    <!-- Form -->
-                    <div>
-                        <form>
-                            <div class="form-row">
-                                <div class="form-group col-12 col-md-6">
-                                    <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" value="" id="name" name="name" placeholder="Nombre de Usuario">
-                                </div>
-                                <div class="form-group col-12 col-md-6">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" value="" id="email" name="email" placeholder="Email de Usuario">
-                                </div>
-                            </div>
-                            <div class="form-row">
-                                <div class="form-group col-12 col-md-6">
-                                    <label for="password">Contraseña</label>
-                                    <input type="password" class="form-control" value="" id="password" name="password" placeholder="Nueva Contraseña">
-                                </div>
-                                <div class="form-group col-12 col-md-6">
-                                    <label for="password_confirm">Confirmar Contraseña</label>
-                                    <input type="password" class="form-control" value="" id="password_confirm" name="password_confirm" placeholder="Confirmar Contraseña">
-                                </div>
-                            </div>
-                            <!--
-                            <div class="custom-control custom-switch mb-2">
-                                <input type="checkbox" class="custom-control-input" id="randomPassword">
-                                <label class="custom-control-label" for="randomPassword">Set Random Password</label>
-                            </div>
-                            -->
+                    <!-- Users -->
+                    <div class="table-responsive-xl">
+                        <table class="table text-nowrap mb-0">
+                            <thead>
+                            <tr>
+                                <th class="font-weight-semi-bold border-top-0 py-2">#</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Nombre</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Email</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Fecha de Registro</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Estado</th>
+                                <th class="font-weight-semi-bold border-top-0 py-2">Acciones</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="py-3">1</td>
+                                <td class="align-middle py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="position-relative mr-2">
+                                            <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-left indicator-success rounded-circle"></span>
+                                            <!--img class="avatar rounded-circle" src="#" alt="John Doe"-->
+                                            <span class="avatar-placeholder mr-md-2">J</span>
+                                        </div>
+                                        John Doe
+                                    </div>
+                                </td>
+                                <td class="py-3">john.doe@example.com</td>
+                                <td class="py-3">January 15, 2019</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-success">Verificado</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a class="link-dark d-inline-block" href="#">
+                                            <i class="gd-pencil icon-text"></i>
+                                        </a>
+                                        <a class="link-dark d-inline-block" href="#">
+                                            <i class="gd-trash icon-text"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">2</td>
+                                <td class="align-middle py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="position-relative mr-2">
+                                            <!--img class="avatar rounded-circle" src="#" alt="John Doe"-->
+                                            <span class="avatar-placeholder mr-md-2">S</span>
+                                        </div>
+                                        Sam Dew
+                                    </div>
+                                </td>
+                                <td class="py-3">sam.dew@example.com</td>
+                                <td class="py-3">January 15, 2019</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-warning">Pendiente</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a class="link-dark d-inline-block" href="#">
+                                            <i class="gd-pencil icon-text"></i>
+                                        </a>
+                                        <a class="link-dark d-inline-block" href="#">
+                                            <i class="gd-trash icon-text"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="py-3">3</td>
+                                <td class="align-middle py-3">
+                                    <div class="d-flex align-items-center">
+                                        <div class="position-relative mr-2">
+                                            <span class="indicator indicator-lg indicator-bordered-reverse indicator-top-left indicator-success rounded-circle"></span>
+                                            <!--img class="avatar rounded-circle" src="#" alt="John Doe"-->
+                                            <span class="avatar-placeholder mr-md-2">A</span>
+                                        </div>
+                                        Anna Doe
+                                    </div>
+                                </td>
+                                <td class="py-3">anna.doe@example.com</td>
+                                <td class="py-3">January 15, 2019</td>
+                                <td class="py-3">
+                                    <span class="badge badge-pill badge-success">Verificado</span>
+                                </td>
+                                <td class="py-3">
+                                    <div class="position-relative">
+                                        <a class="link-dark d-inline-block" href="#">
+                                            <i class="gd-pencil icon-text"></i>
+                                        </a>
+                                        <a class="link-dark d-inline-block" href="#">
+                                            <i class="gd-trash icon-text"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="card-footer d-block d-md-flex align-items-center d-print-none">
+                            <div class="d-flex mb-2 mb-md-0">Mostrando 1-8 de 24 Entradas</div>
 
-                            <button type="submit" class="btn btn-primary float-right">Crear</button>
-                        </form>
+                            <nav class="d-flex ml-md-auto d-print-none" aria-label="Pagination"><ul class="pagination justify-content-end font-weight-semi-bold mb-0">				<li class="page-item">				<a id="datatablePaginationPrev" class="page-link" href="#!" aria-label="Previous"><i class="gd-angle-left icon-text icon-text-xs d-inline-block"></i></a>				</li><li class="page-item d-none d-md-block"><a id="datatablePaginationPage0" class="page-link active" href="#!" data-dt-page-to="0">1</a></li><li class="page-item d-none d-md-block"><a id="datatablePagination1" class="page-link" href="#!" data-dt-page-to="1">2</a></li><li class="page-item d-none d-md-block"><a id="datatablePagination2" class="page-link" href="#!" data-dt-page-to="2">3</a></li><li class="page-item">				<a id="datatablePaginationNext" class="page-link" href="#!" aria-label="Next"><i class="gd-angle-right icon-text icon-text-xs d-inline-block"></i></a>				</li>				</ul></nav>
+                        </div>
                     </div>
-                    <!-- End Form -->
+                    <!-- End Users -->
                 </div>
             </div>
 
@@ -354,8 +427,8 @@
 </main>
 
 
-<script src="public/graindashboard/js/graindashboard.js"></script>
-<script src="public/graindashboard/js/graindashboard.vendor.js"></script>
+<script src="../public/graindashboard/js/graindashboard.js"></script>
+<script src="../public/graindashboard/js/graindashboard.vendor.js"></script>
 
 </body>
 </html>

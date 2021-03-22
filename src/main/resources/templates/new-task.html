@@ -3,17 +3,17 @@
 <html lang="en">
 <head>
     <!-- Title -->
-    <title>Create User | Graindashboard UI Kit</title>
+    <title>Settings | Graindashboard UI Kit</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="public/img/favicon.ico">
+    <link rel="shortcut icon" href="../public/img/favicon.ico">
 
     <!-- Template -->
-    <link rel="stylesheet" href="public/graindashboard/css/graindashboard.css">
+    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css">
 </head>
 
 <body class="has-sidebar has-fixed-sidebar-and-header">
@@ -23,14 +23,14 @@
         <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
             <!-- Logo For Mobile View -->
             <a class="navbar-brand navbar-brand-mobile" href="/">
-                <img class="img-fluid w-100" src="public/img/logo-mini.png" alt="Graindashboard">
+                <img class="img-fluid w-100" src="../public/img/logo-mini.png" alt="Graindashboard">
             </a>
             <!-- End Logo For Mobile View -->
 
             <!-- Logo For Desktop View -->
             <a class="navbar-brand navbar-brand-desktop" href="/">
-                <img class="side-nav-show-on-closed" src="public/img/logo-mini.png" alt="Graindashboard" style="width: auto; height: 33px;">
-                <img class="side-nav-hide-on-closed" src="public/img/logo.png" alt="Graindashboard" style="width: auto; height: 33px;">
+                <img class="side-nav-show-on-closed" src="../public/img/logo-mini.png" alt="Graindashboard" style="width: auto; height: 33px;">
+                <img class="side-nav-hide-on-closed" src="../public/img/logo.png" alt="Graindashboard" style="width: auto; height: 33px;">
             </a>
             <!-- End Logo For Desktop View -->
         </div>
@@ -145,12 +145,13 @@
             <!-- End Dashboard -->
 
 
+
             <!-- Title -->
             <li class="sidebar-heading h6">Menú</li>
             <!-- End Title -->
 
             <!-- Users -->
-            <li class="side-nav-menu-item side-nav-has-menu active side-nav-opened">
+            <li class="side-nav-menu-item side-nav-has-menu">
                 <a class="side-nav-menu-link media align-items-center" href="#"
                    data-target="#subUsers">
                   <span class="side-nav-menu-icon d-flex mr-3">
@@ -164,11 +165,11 @@
                 </a>
 
                 <!-- Users: subUsers -->
-                <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0" style="display: block;">
+                <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0">
                     <li class="side-nav-menu-item">
                         <a class="side-nav-menu-link" href="users.html">Todos los Usuarios</a>
                     </li>
-                    <li class="side-nav-menu-item active">
+                    <li class="side-nav-menu-item">
                         <a class="side-nav-menu-link" href="user-edit.html">Añadir Nuevo Usuario</a>
                     </li>
                 </ul>
@@ -231,14 +232,14 @@
                     <li class="side-nav-menu-item">
                         <a class="side-nav-menu-link" href="password-reset-2.html">Recuperar Contraseña 2</a>
                     </li>
-                    
+                   
                 </ul>
                 <!-- End Pages: subPages -->
             </li>
             <!-- End Authentication -->
 
             <!-- Settings -->
-            <li class="side-nav-menu-item">
+            <li class="side-nav-menu-item active">
                 <a class="side-nav-menu-link media align-items-center" href="settings.html">
               <span class="side-nav-menu-icon d-flex mr-3">
                 <i class="gd-settings"></i>
@@ -272,15 +273,15 @@
                     <nav class="d-none d-md-block" aria-label="breadcrumb">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
-                                <a href="#">Usuarios</a>
+                                <a href="#">Profile</a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Crear Nuevo Usuario</li>
+                            <li class="breadcrumb-item active" aria-current="page">Añadir Nueva Tarea</li>
                         </ol>
                     </nav>
                     <!-- End Breadcrumb -->
 
                     <div class="mb-3 mb-md-4 d-flex justify-content-between">
-                        <div class="h3 mb-0">Crear Nuevo Usuario</div>
+                        <div class="h3 mb-0">Añadir Nueva Tarea</div>
                     </div>
 
 
@@ -289,32 +290,42 @@
                         <form>
                             <div class="form-row">
                                 <div class="form-group col-12 col-md-6">
-                                    <label for="name">Nombre</label>
-                                    <input type="text" class="form-control" value="" id="name" name="name" placeholder="Nombre de Usuario">
+                                    <label for="name">Nombre de la Tarea</label>
+                                    <input type="text" class="form-control" value="" id="name" name="name" placeholder="Nombre de la Tarea">
                                 </div>
                                 <div class="form-group col-12 col-md-6">
-                                    <label for="email">Email</label>
-                                    <input type="email" class="form-control" value="" id="email" name="email" placeholder="Email de Usuario">
+                                    <label for="email">Descripción</label>
+                                    <input type="email" class="form-control" value="" id="email" name="email" placeholder="Describa brevemente la tarea">
                                 </div>
                             </div>
                             <div class="form-row">
-                                <div class="form-group col-12 col-md-6">
-                                    <label for="password">Contraseña</label>
-                                    <input type="password" class="form-control" value="" id="password" name="password" placeholder="Nueva Contraseña">
+                                <div class="col-12">
+                                    <div class="font-weight-semi-bold h5 mb-3">Usuario y carga horaria</div>
                                 </div>
-                                <div class="form-group col-12 col-md-6">
-                                    <label for="password_confirm">Confirmar Contraseña</label>
-                                    <input type="password" class="form-control" value="" id="password_confirm" name="password_confirm" placeholder="Confirmar Contraseña">
+                                <div class="form-group col-12 col-md-4">
+                                    <label for="old_password">Asignar Usuario</label>
+                                    <input type="password" class="form-control" value="" id="old_password" name="old_password" placeholder="Ingrese un Usuario">
+                                </div>
+                                <div class="form-group col-12 col-md-4">
+                                    <label for="password">Categoría</label>
+                                    <div class="form-group">
+                                        <select class="form-control" id="formcontrolCategoria">
+                                          <option>Limpieza</option>
+                                          <option>Compras</option>
+                                          <option>Otros</option>
+                                        </select>
+                                      </div>
+                                </div>
+                                <div class="form-group col-12 col-md-4">
+                                    <label for="old_password">Fecha límite</label>
+                                    <div>
+                                        <input type="date" id="start" name="trip-start"
+                                        value="2021-03-01"
+                                        min="2021-01-01" max="2025-12-31">
+                                    </div>
                                 </div>
                             </div>
-                            <!--
-                            <div class="custom-control custom-switch mb-2">
-                                <input type="checkbox" class="custom-control-input" id="randomPassword">
-                                <label class="custom-control-label" for="randomPassword">Set Random Password</label>
-                            </div>
-                            -->
-
-                            <button type="submit" class="btn btn-primary float-right">Crear</button>
+                            <button type="submit" class="btn btn-primary float-right">Aceptar</button>
                         </form>
                     </div>
                     <!-- End Form -->
@@ -354,8 +365,8 @@
 </main>
 
 
-<script src="public/graindashboard/js/graindashboard.js"></script>
-<script src="public/graindashboard/js/graindashboard.vendor.js"></script>
+<script src="../public/graindashboard/js/graindashboard.js"></script>
+<script src="../public/graindashboard/js/graindashboard.vendor.js"></script>
 
 </body>
 </html>

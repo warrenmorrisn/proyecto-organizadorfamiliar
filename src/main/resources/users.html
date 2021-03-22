@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
 <html lang="en">
 <head>
     <!-- Title -->
@@ -136,7 +137,7 @@
             <li class="side-nav-menu-item">
                 <a class="side-nav-menu-link media align-items-center" href="/">
               <span class="side-nav-menu-icon d-flex mr-3">
-                <i class="gd-dashboard"></i>
+                <i class="gd-star"></i>
               </span>
                     <span class="side-nav-fadeout-on-closed media-body">INICIO</span>
                 </a>
@@ -175,6 +176,33 @@
                 <!-- End Users: subUsers -->
             </li>
             <!-- End Users -->
+
+            <!-- Tasks -->
+            <li class="side-nav-menu-item side-nav-has-menu">
+                <a class="side-nav-menu-link media align-items-center" href="#"
+                   data-target="#subTasks">
+                  <span class="side-nav-menu-icon d-flex mr-3">
+                    <i class="gd-pencil-alt"></i>
+                  </span>
+                    <span class="side-nav-fadeout-on-closed media-body">Tareas</span>
+                    <span class="side-nav-control-icon d-flex">
+                <i class="gd-angle-right side-nav-fadeout-on-closed"></i>
+              </span>
+                    <span class="side-nav__indicator side-nav-fadeout-on-closed"></span>
+                </a>
+
+                <!-- Users: subTasks -->
+                <ul id="subTasks" class="side-nav-menu side-nav-menu-second-level mb-0">
+                    <li class="side-nav-menu-item">
+                        <a class="side-nav-menu-link" href="index.html">Todas las Tareas</a>
+                    </li>
+                    <li class="side-nav-menu-item">
+                        <a class="side-nav-menu-link" href="new-task.html">Añadir Tarea</a>
+                    </li>
+                </ul>
+                <!-- End Users: subTasks -->
+            </li>
+            <!-- End Tasks -->
 
             <!-- Authentication -->
             <li class="side-nav-menu-item side-nav-has-menu">
