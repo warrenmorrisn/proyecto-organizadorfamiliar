@@ -26,6 +26,8 @@
             opacity: 0.95;
         }
     </style>
+    <link th:rel="stylesheet" th:href="@{assets/bootstrap4-toggle/bootstrap4-toggle.min.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/4.0.0-2/css/bootstrap.min.css} "/>
 </head>
 
 <body class="has-sidebar has-fixed-sidebar-and-header">
@@ -149,7 +151,7 @@
 
             <!-- Dashboard -->
             <li class="side-nav-menu-item active">
-                <a class="side-nav-menu-link media align-items-center" href="/">
+                <a class="side-nav-menu-link media align-items-center" href="/" th:href="@{/}">
               <span class="side-nav-menu-icon d-flex mr-3">
                 <i class="gd-star"></i>
               </span>
@@ -181,22 +183,22 @@
                 <!-- Users: subUsers -->
                 <ul id="subUsers" class="side-nav-menu side-nav-menu-second-level mb-0">
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="users.html">Todos los usuarios</a>
+                        <a class="side-nav-menu-link" href="users.html" th:href="@{users}" >Todos los usuarios</a>
                     </li>
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="user-edit.html">Añadir nuevo usuario</a>
+                        <a class="side-nav-menu-link" href="user-edit.html" th:href="@{user-edit}" >Añadir nuevo usuario</a>
                     </li>
                 </ul>
 
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link media align-items-center" href="users.html">
+                    <a class="side-nav-menu-link media align-items-center" href="users.html" th:href="@{users}">
                 <span class="side-nav-menu-icon d-flex mr-3">
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Todos los usuarios</span>
                     </a>
                 </li>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link media align-items-center" href="user-edit.html">
+                    <a class="side-nav-menu-link media align-items-center" href="user-edit.html" th:href="@{user-edit}">
                 <span class="side-nav-menu-icon d-flex mr-3">
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Añadir nuevo usuario</span>
@@ -224,15 +226,15 @@
                 <!-- Users: subTasks -->
                 <ul id="subTasks" class="side-nav-menu side-nav-menu-second-level mb-0">
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="index.html">Todas las Tareas</a>
+                        <a class="side-nav-menu-link" href="index.html" th:href="@{/}">Todas las Tareas</a>
                     </li>
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="new-task.html">Añadir Tarea</a>
+                        <a class="side-nav-menu-link" href="new-task.html" th:href="@{new-task}">Añadir Tarea</a>
                     </li>
                 </ul>
 
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link media align-items-center" href="index.html">
+                    <a class="side-nav-menu-link media align-items-center" href="index.html" th:href="@{/}">
                 <span class="side-nav-menu-icon d-flex mr-3">
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Todas las Tareas</span>
@@ -240,7 +242,7 @@
                 </li>
 
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link media align-items-center" href="new-task.html">
+                    <a class="side-nav-menu-link media align-items-center" href="new-task.html" th:href="@{new-task}">
                 <span class="side-nav-menu-icon d-flex mr-3">
                 </span>
                         <span class="side-nav-fadeout-on-closed media-body">Añadir Tarea</span>
@@ -267,30 +269,30 @@
                 <!-- Pages: subPages -->
                 <ul id="subPages" class="side-nav-menu side-nav-menu-second-level mb-0">
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="login.html">Login</a>
+                        <a class="side-nav-menu-link" href="login.html" th:href="@{login}" >Login</a>
                     </li>
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="register.html">Registro</a>
+                        <a class="side-nav-menu-link" href="register.html" th:href="@{register}" >Registro</a>
                     </li>
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="password-reset.html">Recuperar Constraseña</a>
+                        <a class="side-nav-menu-link" href="password-reset.html" th:href="@{password-reset}" >Recuperar Constraseña</a>
                     </li>
                     <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="password-reset-2.html">Recuperar Contraseña 2</a>
+                        <a class="side-nav-menu-link" href="password-reset-2.html" th:href="@{password-reset-2}" >Recuperar Contraseña 2</a>
                     </li>
 
                 </ul>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="login.html">Login</a>
+                    <a class="side-nav-menu-link" href="login.html" th:href="@{login}" >Login</a>
                 </li>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="register.html">Registro</a>
+                    <a class="side-nav-menu-link" href="register.html" th:href="@{register}" >Registro</a>
                 </li>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="password-reset.html">Recuperar Constraseña</a>
+                    <a class="side-nav-menu-link" href="password-reset.html" th:href="@{password-reset}" >Recuperar Constraseña</a>
                 </li>
                 <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="password-reset-2.html">Recuperar Contraseña 2</a>
+                    <a class="side-nav-menu-link" href="password-reset-2.html" th:href="@{password-reset-2}" >Recuperar Contraseña 2</a>
                 </li>
                 <!-- End Pages: subPages -->
             </li>
@@ -298,7 +300,7 @@
 
             <!-- Configuración -->
             <li class="side-nav-menu-item">
-                <a class="side-nav-menu-link media align-items-center" href="settings.html">
+                <a class="side-nav-menu-link media align-items-center" href="settings.html" th:href="@{settings}" >
               <span class="side-nav-menu-icon d-flex mr-3">
                 <i class="gd-settings"></i>
               </span>
@@ -309,7 +311,7 @@
 
             <!-- Static -->
             <li class="side-nav-menu-item">
-                <a class="side-nav-menu-link media align-items-center" href="static-non-auth.html">
+                <a class="side-nav-menu-link media align-items-center" href="static-non-auth.html" th:href="@{static-non-auth}" >
               <span class="side-nav-menu-icon d-flex mr-3">
                 <i class="gd-file"></i>
               </span>
@@ -335,7 +337,7 @@
                 <div class="col-12">
                     <div class="card mb-3 mb-md-4">
                         <div class="card-header">
-                            <h5 class="font-weight-semi-bold mb-0">Recent Orders</h5>
+                            <h5 class="font-weight-semi-bold mb-0">Tareas</h5>
                         </div>
 
                         <div class="card-body pt-0">

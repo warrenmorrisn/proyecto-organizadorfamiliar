@@ -32,7 +32,7 @@ public class TareaController {
 
         Tarea tarea = new Tarea();
 
-        model.addAttribute("tareaa", tarea);
+        model.addAttribute("tarea", tarea);
 
         return "tarea/lista-tareas";
     }
