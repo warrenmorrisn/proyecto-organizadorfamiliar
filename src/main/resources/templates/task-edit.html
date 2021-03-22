@@ -3,17 +3,17 @@
 <html lang="en">
 <head>
     <!-- Title -->
-    <title>Create User | Graindashboard UI Kit</title>
+    <title>Editar Tarea | Organizador Familiar</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/img/favicon.ico">
+    <link rel="shortcut icon" href="../public/img/favicon.ico" th:href="@{img/favicon.ico}">
 
     <!-- Template -->
-    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css">
+    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css" th:href="@{graindashboard/css/graindashboard.css}">
 </head>
 
 <body class="has-sidebar has-fixed-sidebar-and-header">
@@ -23,14 +23,14 @@
         <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
             <!-- Logo For Mobile View -->
             <a class="navbar-brand navbar-brand-mobile" href="/">
-                <img class="img-fluid w-100" src="../public/img/logo-mini.png" alt="Graindashboard">
+                <img class="img-fluid w-100" src="../public/img/logo-mini.png" th:src="@{img/logo-mini.png}" alt="Graindashboard">
             </a>
             <!-- End Logo For Mobile View -->
 
             <!-- Logo For Desktop View -->
             <a class="navbar-brand navbar-brand-desktop" href="/">
-                <img class="side-nav-show-on-closed" src="../public/img/logo-mini.png" alt="Graindashboard" style="width: auto; height: 33px;">
-                <img class="side-nav-hide-on-closed" src="../public/img/logo.png" alt="Graindashboard" style="width: auto; height: 33px;">
+                <img class="side-nav-show-on-closed" src="../public/img/logo-mini.png" th:src="@{img/logo-mini.png}" alt="Graindashboard" style="width: auto; height: 33px;">
+                <img class="side-nav-hide-on-closed" src="../public/img/logo.png" th:src="@{img/logo.png}" alt="Graindashboard" style="width: auto; height: 33px;">
             </a>
             <!-- End Logo For Desktop View -->
         </div>
@@ -354,8 +354,8 @@
 </main>
 
 
-<script src="../public/graindashboard/js/graindashboard.js"></script>
-<script src="../public/graindashboard/js/graindashboard.vendor.js"></script>
+<script src="../public/graindashboard/js/graindashboard.js" th:src="@{graindashboard/js/graindashboard.js}"></script>
+<script src="../public/graindashboard/js/graindashboard.vendor.js" th:src="@{graindashboard/js/graindashboard.vendor.js}"></script>
 
 </body>
 </html>

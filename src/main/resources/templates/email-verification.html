@@ -3,17 +3,17 @@
 <html lang="en">
   <head>
     <!-- Title -->
-    <title>Verify Your Email Address | Graindashboard UI Kit</title>
+    <title>Verificar dirección Email | Organizador Familiar</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/img/favicon.ico">
+    <link rel="shortcut icon" href="../public/img/favicon.ico" th:href="@{img/favicon.png}">
 
     <!-- Template -->
-    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css">
+    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css" th:href="@{graindashboard/css/graindashboard.css}">
   </head>
 
   <body class="">
@@ -27,7 +27,7 @@
 				<div class="row justify-content-md-center">
 					<div class="card-wrapper col-12 col-md-6 mt-5">
 						<div class="brand text-center mb-3">
-							<a href="/"><img src="../public/img/logo.png"></a>
+							<a href="/"><img src="../public/img/logo.png" th:href="@{img/logo.png}"></a>
 						</div>
 						<div class="card">
 							<div class="card-body">
@@ -57,7 +57,7 @@
       </div>
     </main>
 
-	<script src="../public/graindashboard/js/graindashboard.js"></script>
-    <script src="../public/graindashboard/js/graindashboard.vendor.js"></script>
+	<script src="../public/graindashboard/js/graindashboard.js" th:href="@{graindashboard/js/graindashboard.js}"></script>
+    <script src="../public/graindashboard/js/graindashboard.vendor.js" th:href="@{graindashboard/js/graindashboard.vendor.js}"></script>
   </body>
 </html>
