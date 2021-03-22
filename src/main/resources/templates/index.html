@@ -10,15 +10,15 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/img/favicon.png">
+    <link rel="shortcut icon" href="../public/img/favicon.png" th:href="@{img/favicon.png}">
 
 
     <!-- DEMO CHARTS -->
-    <link rel="stylesheet" href="../public/demo/chartist.css">
-    <link rel="stylesheet" href="../public/demo/chartist-plugin-tooltip.css">
+    <link rel="stylesheet" href="../public/demo/chartist.css" th:href="@{demo/chartist.css}">
+    <link rel="stylesheet" href="../public/demo/chartist-plugin-tooltip.css" th:href="@{demo/chartist-plugin-tooltip.css}">
 
     <!-- Template -->
-    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css">
+    <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css" th:href="@{graindashboard/css/graindashboard.css}">
 
 </head>
 
@@ -29,14 +29,14 @@
         <div class="navbar-brand-wrapper d-flex align-items-center col-auto">
             <!-- Logo For Mobile View -->
             <a class="navbar-brand navbar-brand-mobile" href="/">
-                <img class="img-fluid w-100" src="../public/img/logo-mini.png" alt="Graindashboard">
+                <img class="img-fluid w-100" src="../public/img/logo-mini.png" th:src="@{img/logo-mini.png}" alt="Graindashboard">
             </a>
             <!-- End Logo For Mobile View -->
 
             <!-- Logo For Desktop View -->
             <a class="navbar-brand navbar-brand-desktop" href="/">
-                <img class="side-nav-show-on-closed" src="../public/img/logo-mini.png" alt="Graindashboard" style="width: auto; height: 60px;">
-                <img class="side-nav-hide-on-closed" src="../public/img/logo.png"  alt="Graindashboard" style="width: auto; height: 60px;">
+                <img class="side-nav-show-on-closed" src="../public/img/logo-mini.png" th:src="@{img/logo-mini.png}" alt="Graindashboard" style="width: auto; height: 60px;">
+                <img class="side-nav-hide-on-closed" src="../public/img/logo.png" th:src="@{img/logo.png}" alt="Graindashboard" style="width: auto; height: 60px;">
             </a>
             <!-- End Logo For Desktop View -->
         </div>
@@ -179,7 +179,23 @@
                         <a class="side-nav-menu-link" href="user-edit.html">Añadir nuevo usuario</a>
                     </li>
                 </ul>
+
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link media align-items-center" href="users.html">
+                <span class="side-nav-menu-icon d-flex mr-3">
+                </span>
+                        <span class="side-nav-fadeout-on-closed media-body">Todos los usuarios</span>
+                    </a>
+                </li>
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link media align-items-center" href="user-edit.html">
+                <span class="side-nav-menu-icon d-flex mr-3">
+                </span>
+                        <span class="side-nav-fadeout-on-closed media-body">Añadir nuevo usuario</span>
+                    </a>
+                </li>
                 <!-- End Users: subUsers -->
+
             </li>
             <!-- End Users -->
 
@@ -206,6 +222,22 @@
                         <a class="side-nav-menu-link" href="new-task.html">Añadir Tarea</a>
                     </li>
                 </ul>
+
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link media align-items-center" href="index.html">
+                <span class="side-nav-menu-icon d-flex mr-3">
+                </span>
+                        <span class="side-nav-fadeout-on-closed media-body">Todas las Tareas</span>
+                    </a>
+                </li>
+
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link media align-items-center" href="new-task.html">
+                <span class="side-nav-menu-icon d-flex mr-3">
+                </span>
+                        <span class="side-nav-fadeout-on-closed media-body">Añadir Tarea</span>
+                    </a>
+                </li>
                 <!-- End Users: subTasks -->
             </li>
             <!-- End Tasks -->
@@ -238,8 +270,20 @@
                     <li class="side-nav-menu-item">
                         <a class="side-nav-menu-link" href="password-reset-2.html">Recuperar Contraseña 2</a>
                     </li>
-                   
+
                 </ul>
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link" href="login.html">Login</a>
+                </li>
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link" href="register.html">Registro</a>
+                </li>
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link" href="password-reset.html">Recuperar Constraseña</a>
+                </li>
+                <li class="side-nav-menu-item">
+                    <a class="side-nav-menu-link" href="password-reset-2.html">Recuperar Contraseña 2</a>
+                </li>
                 <!-- End Pages: subPages -->
             </li>
             <!-- End Authentication -->
@@ -573,16 +617,16 @@
 </main>
 
 
-<script src="../public/graindashboard/js/graindashboard.js"></script>
-<script src="../public/graindashboard/js/graindashboard.vendor.js"></script>
+<script src="../public/graindashboard/js/graindashboard.js" th:src="@{graindashboard/js/graindashboard.js}"></script>
+<script src="../public/graindashboard/js/graindashboard.vendor.js" th:src="@{graindashboard/js/graindashboard.vendor.js}"></script>
 
 <!-- DEMO CHARTS -->
-<script src="../public/demo/resizeSensor.js"></script>
-<script src="../public/demo/chartist.js"></script>
-<script src="../public/demo/chartist-plugin-tooltip.js"></script>
-<script src="../public/demo/gd.chartist-area.js"></script>
-<script src="../public/demo/gd.chartist-bar.js"></script>
-<script src="../public/demo/gd.chartist-donut.js"></script>
+<script src="../public/demo/resizeSensor.js" th:src="@{graindashboard/js/resizeSensor.js}"></script>
+<script src="../public/demo/chartist.js" th:src="@{graindashboard/js/chartist.js}"></script>
+<script src="../public/demo/chartist-plugin-tooltip.js" th:src="@{graindashboard/js/chartist-plugin-tooltip.js}"></script>
+<script src="../public/demo/gd.chartist-area.js" th:src="@{graindashboard/js/gd.chartist-area.js}"></script>
+<script src="../public/demo/gd.chartist-bar.js" th:src="@{graindashboard/js/gd.chartist-bar.js}"></script>
+<script src="../public/demo/gd.chartist-donut.js" th:src="@{graindashboard/js/gd.chartist-donut.js}"></script>
 <script>
     $.GDCore.components.GDChartistArea.init('.js-area-chart');
     $.GDCore.components.GDChartistBar.init('.js-bar-chart');
