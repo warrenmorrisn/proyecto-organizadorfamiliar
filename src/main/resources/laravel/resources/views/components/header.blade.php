@@ -10,8 +10,8 @@
 
 	  <!-- Logo For Desktop View -->
 	  <a class="navbar-brand navbar-brand-desktop" href="/">
-		<img class="side-nav-show-on-closed" src="{{ asset('img/logo-mini.png') }}" alt="{{ config('app.name', 'Laravel') }}" style="width: auto; height: 33px;">
-		<img class="side-nav-hide-on-closed" src="{{ asset('img/logo.png') }}" alt="{{ config('app.name', 'Laravel') }}" style="width: auto; height: 33px;">
+		<img class="side-nav-show-on-closed" src="{{ asset('img/logo-mini.png') }}" alt="{{ config('app.name', 'Laravel') }}" style="width: auto; height: 60px;">
+		<img class="side-nav-hide-on-closed" src="{{ asset('img/logo.png') }}" alt="{{ config('app.name', 'Laravel') }}" style="width: auto; height: 60px;">
 	  </a>
 	  <!-- End Logo For Desktop View -->
 	</div>
