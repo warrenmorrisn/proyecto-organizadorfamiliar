@@ -56,8 +56,8 @@ public class TareaController {
         //Guarda la tarea
         tareaService.save(tarea);
 
-        //se utiliza el redirect para prevenir duplicacion de submissions
-        return "redirect:/tarea/lista-tareas";
+        //se utiliza eltarea redirect para prevenir duplicacion de submissions
+        return "index";
     }
 
     @GetMapping("/borrarTarea")

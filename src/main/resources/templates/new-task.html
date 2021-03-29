@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
 <head>
     <!-- Title -->
     <title>Nueva Tarea | Organizador Familiar</title>
@@ -9,8 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/img/favicon.ico" th:href="@{img/favicon.ico}">
+    <!-- Favicon href="../public/img/favicon.ico" -->
+    <link rel="shortcut icon" th:href="@{img/favicon.ico}">
 
     <!-- Template -->
     <link rel="stylesheet" href="../public/graindashboard/css/graindashboard.css" th:href="@{graindashboard/css/graindashboard.css}">
@@ -337,15 +336,15 @@
 
                     <!-- Form -->
                     <div>
-                        <form>
+                        <form  th:action="@{/tarea/guardarTarea}"  method="post"> <!--th:object="${tarea}" action="#"-->
                             <div class="form-row">
                                 <div class="form-group col-12 col-md-6">
-                                    <label for="name">Nombre de la Tarea</label>
-                                    <input type="text" class="form-control" value="" id="name" name="name" placeholder="Nombre de la Tarea">
+                                    <label for="titulo">Nombre de la Tarea</label>  <!--  -->
+                                    <input type="text" class="form-control" th:field="*{tarea.titulo}" id="titulo" name="title" placeholder="Nombre de la Tarea"><!--  -->
                                 </div>
                                 <div class="form-group col-12 col-md-6">
-                                    <label for="email">Descripción</label>
-                                    <input type="email" class="form-control" value="" id="email" name="email" placeholder="Describa brevemente la tarea">
+                                    <label for="descripcion">Descripción</label> <!-- -->
+                                    <input type="text" class="form-control" th:field="*{tarea.descripcion}" id="descripcion" name="descripcion" placeholder="Describa brevemente la tarea"><!--  -->
                                 </div>
                             </div>
                             <div class="form-row">
@@ -353,25 +352,25 @@
                                     <div class="font-weight-semi-bold h5 mb-3">Usuario y carga horaria</div>
                                 </div>
                                 <div class="form-group col-12 col-md-4">
-                                    <label for="old_password">Asignar Usuario</label>
-                                    <input type="password" class="form-control" value="" id="old_password" name="old_password" placeholder="Ingrese un Usuario">
+                                    <label for="persona">Asignar Usuario</label>
+                                    <input type="persona" class="form-control" value="" id="persona" name="persona" placeholder="Ingrese un Usuario">
                                 </div>
                                 <div class="form-group col-12 col-md-4">
-                                    <label for="password">Categoría</label>
+                                    <label for="formcontrolCategoria">Categoría</label>
                                     <div class="form-group">
-                                        <select class="form-control" id="formcontrolCategoria">
-                                          <option>Limpieza</option>
-                                          <option>Compras</option>
-                                          <option>Otros</option>
+                                        <select class="form-control" id="formcontrolCategoria" th:field="*{tarea.categoria}">
+                                          <option th:value="Limpieza" th:text="Limpieza">Limpieza</option>
+                                          <option th:value="Compras" th:text="Compras">Compras</option>
+                                          <option th:value="Otros" th:text="Otros">Otros</option>
                                         </select>
                                       </div>
                                 </div>
                                 <div class="form-group col-12 col-md-4">
-                                    <label for="old_password">Fecha límite</label>
+                                    <label for="fecha_limite">Fecha límite</label>
                                     <div>
-                                        <input type="date" id="start" name="trip-start"
-                                        value="2021-03-01"
-                                        min="2021-01-01" max="2025-12-31">
+                                        <input type="date" id="fecha_limite" name="fecha_limite"
+                                        th:field="*{tarea.fechaTarea}"
+                                        min="2021-01-01" max="2025-12-31">  <!--  -->
                                     </div>
                                 </div>
                             </div>

@@ -4,19 +4,32 @@ import ar.gob.siliconmisiones.organizadorfamiliar.entity.Grupo;
 import ar.gob.siliconmisiones.organizadorfamiliar.entity.Tarea;
 import ar.gob.siliconmisiones.organizadorfamiliar.entity.Usuario;
 import ar.gob.siliconmisiones.organizadorfamiliar.service.GrupoService;
+import ar.gob.siliconmisiones.organizadorfamiliar.service.TareaService;
 import ar.gob.siliconmisiones.organizadorfamiliar.service.UsuarioService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
 public class IndexController{
-@GetMapping("/")
-public String index(Model model) {
 
-        return "index";
+        private TareaService tareaService;
+
+        public IndexController(TareaService tareaService) {
+                this.tareaService = tareaService;
+        }
+
+        @GetMapping("/")
+                public String index(Model model) {
+                List<Tarea> listaTareas = tareaService.findAll();
+                Collections.reverse(listaTareas);
+                model.addAttribute("tareas", listaTareas);
+                return "index";
         }
 
         @GetMapping("/users")
@@ -41,7 +54,8 @@ public String index(Model model) {
 
         @GetMapping("/new-task")
         public String newTask(Model model) {
-                return "new-task";
+            model.addAttribute("tarea", new Tarea());
+            return "new-task";
         }
 
         @GetMapping("/password-reset")

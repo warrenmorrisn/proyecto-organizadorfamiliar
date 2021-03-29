@@ -10,7 +10,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
 
     <!-- Favicon -->
-    <link rel="shortcut icon" href="../public/img/favicon.png" th:href="@{img/favicon.png}">
+    <!--<link rel="shortcut icon" href="../public/img/favicon.png" th:href="@{img/favicon.png}">-->
 
 
     <!-- DEMO CHARTS -->
@@ -346,20 +346,20 @@
                                         <th class="font-weight-semi-bold border-top-0 py-2">#</th>
                                         <th class="font-weight-semi-bold border-top-0 py-2">Tarea</th>
                                         <th class="font-weight-semi-bold border-top-0 py-2">Usuario</th>
-                                        <th class="font-weight-semi-bold border-top-0 py-2">Tiempo estimado</th>
+                                        <th class="font-weight-semi-bold border-top-0 py-2">Descripción</th>
                                         <th class="font-weight-semi-bold border-top-0 py-2">Estado</th>
-                                        <th class="font-weight-semi-bold border-top-0 py-2">Actions</th>
+                                        <th class="font-weight-semi-bold border-top-0 py-2">Acciones</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <tr>
-                                        <td class="py-3">31</td>
+                                    <tr th:each="tarea: ${tareas}">
+                                        <td class="py-3" th:text="*{tarea.idTarea}"></td>
                                         <td class="py-3">
-                                            <div>Limpiar el baño</div>
+                                            <div th:text="*{tarea.titulo}"></div>
                                             <div class="text-muted"></div>
                                         </td>
                                         <td class="py-3">Charles Junior</td>
-                                        <td class="py-3">2hs</td>
+                                        <td class="py-3" th:text="*{tarea.descripcion}"></td>
                                         <td class="py-3">
                                             <span class="badge badge-pill badge-warning">En curso</span>
                                         </td>
@@ -370,210 +370,6 @@
                                                 </a>
 
                                                 <ul id="dropDown16" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown16Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-pencil unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Editar</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-close unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Eliminar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">32</td>
-                                        <td class="py-3">
-                                            <div>Comprar verduras</div>
-                                            <div class="text-muted"></div>
-                                        </td>
-                                        <td class="py-3">John Doe</td>
-                                        <td class="py-3">2hs</td>
-                                        <td class="py-3">
-                                            <span class="badge badge-pill badge-success">Completada</span>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="position-relative">
-                                                <a id="dropDown15Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown15" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown15" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                                                    <i class="gd-more-alt icon-text"></i>
-                                                </a>
-
-                                                <ul id="dropDown15" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown15Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-pencil unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Editar</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-close unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Eliminar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">33</td>
-                                        <td class="py-3">
-                                            <div>Alimentar las mascotas</div>
-                                            <div class="text-muted"></div>
-                                        </td>
-                                        <td class="py-3">Mary Poppins</td>
-                                        <td class="py-3">2hs</td>
-                                        <td class="py-3">
-                                            <span class="badge badge-pill badge-warning">En curso</span>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="position-relative">
-                                                <a id="dropDown14Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown14" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown14" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                                                    <i class="gd-more-alt icon-text"></i>
-                                                </a>
-
-                                                <ul id="dropDown14" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown14Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-pencil unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Editar</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-close unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Eliminar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">34</td>
-                                        <td class="py-3">
-                                            <div>Cortar el pasto</div>
-                                            <div class="text-muted"></div>
-                                        </td>
-                                        <td class="py-3">Charles Junior</td>
-                                        <td class="py-3">2hs</td>
-                                        <td class="py-3">
-                                            <span class="badge badge-pill badge-danger">Cancelada</span>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="position-relative">
-                                                <a id="dropDown13Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown13" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown13" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                                                    <i class="gd-more-alt icon-text"></i>
-                                                </a>
-
-                                                <ul id="dropDown13" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown13Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-pencil unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Editar</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-close unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Eliminar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">35</td>
-                                        <td class="py-3">
-                                            <div>Ordenar la habitación</div>
-                                            <div class="text-muted"></div>
-                                        </td>
-                                        <td class="py-3">John Doe</td>
-                                        <td class="py-3">2hs</td>
-                                        <td class="py-3">
-                                            <span class="badge badge-pill badge-success">Completada</span>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="position-relative">
-                                                <a id="dropDown12Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown12" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown12" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                                                    <i class="gd-more-alt icon-text"></i>
-                                                </a>
-
-                                                <ul id="dropDown12" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown12Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-pencil unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Editar</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-close unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Eliminar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">36</td>
-                                        <td class="py-3">
-                                            <div>Comprar carne</div>
-                                            <div class="text-muted"></div>
-                                        </td>
-                                        <td class="py-3">Charles Junior</td>
-                                        <td class="py-3">2hs</td>
-                                        <td class="py-3">
-                                            <span class="badge badge-pill badge-success">Completada</span>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="position-relative">
-                                                <a id="dropDown11Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown11" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown11" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                                                    <i class="gd-more-alt icon-text"></i>
-                                                </a>
-
-                                                <ul id="dropDown11" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown11Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-pencil unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Editar</span>
-                                                        </a>
-                                                    </li>
-                                                    <li class="unfold-item">
-                                                        <a class="unfold-link media align-items-center text-nowrap" href="#">
-                                                            <i class="gd-close unfold-item-icon mr-3"></i>
-                                                            <span class="media-body">Eliminar</span>
-                                                        </a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="py-3">37</td>
-                                        <td class="py-3">
-                                            <div>Limpiar los platos</div>
-                                            <div class="text-muted"></div>
-                                        </td>
-                                        <td class="py-3">Mary Poppins</td>
-                                        <td class="py-3">2hs</td>
-                                        <td class="py-3">
-                                            <span class="badge badge-pill badge-success">Completada</span>
-                                        </td>
-                                        <td class="py-3">
-                                            <div class="position-relative">
-                                                <a id="dropDown10Invoker" class="link-dark d-flex" href="#" aria-controls="dropDown10" aria-haspopup="true" aria-expanded="false" data-unfold-target="#dropDown10" data-unfold-event="click" data-unfold-type="css-animation" data-unfold-duration="300" data-unfold-animation-in="fadeIn" data-unfold-animation-out="fadeOut">
-                                                    <i class="gd-more-alt icon-text"></i>
-                                                </a>
-
-                                                <ul id="dropDown10" class="unfold unfold-light unfold-top unfold-right position-absolute py-3 mt-1 unfold-css-animation unfold-hidden fadeOut" aria-labelledby="dropDown10Invoker" style="min-width: 150px; animation-duration: 300ms; right: 0px;">
                                                     <li class="unfold-item">
                                                         <a class="unfold-link media align-items-center text-nowrap" href="#">
                                                             <i class="gd-pencil unfold-item-icon mr-3"></i>
