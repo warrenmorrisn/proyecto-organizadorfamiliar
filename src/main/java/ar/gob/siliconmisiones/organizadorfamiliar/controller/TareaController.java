@@ -57,7 +57,7 @@ public class TareaController {
         tareaService.save(tarea);
 
         //se utiliza eltarea redirect para prevenir duplicacion de submissions
-        return "index";
+        return "redirect:/#";
     }
 
     @GetMapping("/borrarTarea")

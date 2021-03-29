@@ -257,32 +257,18 @@
 
                 <!-- Pages: subPages -->
                 <ul id="subPages" class="side-nav-menu side-nav-menu-second-level mb-0">
-                    <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="login.html" th:href="@{login}" >Login</a>
-                    </li>
+                    
                     <li class="side-nav-menu-item">
                         <a class="side-nav-menu-link" href="register.html" th:href="@{register}" >Registro</a>
                     </li>
-                    <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="password-reset.html" th:href="@{password-reset}" >Recuperar Constraseña</a>
-                    </li>
-                    <li class="side-nav-menu-item">
-                        <a class="side-nav-menu-link" href="password-reset-2.html" th:href="@{password-reset-2}" >Recuperar Contraseña 2</a>
-                    </li>
+                    
 
                 </ul>
-                <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="login.html" th:href="@{login}" >Login</a>
-                </li>
+               
                 <li class="side-nav-menu-item">
                     <a class="side-nav-menu-link" href="register.html" th:href="@{register}" >Registro</a>
                 </li>
-                <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="password-reset.html" th:href="@{password-reset}" >Recuperar Constraseña</a>
-                </li>
-                <li class="side-nav-menu-item">
-                    <a class="side-nav-menu-link" href="password-reset-2.html" th:href="@{password-reset-2}" >Recuperar Contraseña 2</a>
-                </li>
+               
                 <!-- End Pages: subPages -->
             </li>
             <!-- End Authentication -->
@@ -304,7 +290,7 @@
               <span class="side-nav-menu-icon d-flex mr-3">
                 <i class="gd-file"></i>
               </span>
-                    <span class="side-nav-fadeout-on-closed media-body">Acerca de Organizador Familiar</span>
+                    <span class="side-nav-fadeout-on-closed media-body">Acerca de...</span>
                 </a>
             </li>
             <!-- End Static -->
@@ -366,12 +352,7 @@
                                       </div>
                                 </div>
                                 <div class="form-group col-12 col-md-4">
-                                    <label for="fecha_limite">Fecha límite</label>
-                                    <div>
-                                        <input type="date" id="fecha_limite" name="fecha_limite"
-                                        th:field="*{tarea.fechaTarea}"
-                                        min="2021-01-01" max="2025-12-31">  <!--  -->
-                                    </div>
+
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary float-right">Aceptar</button>
